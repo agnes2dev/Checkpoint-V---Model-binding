@@ -1,0 +1,29 @@
+@model Aluno
+
+@{
+    ViewData["Title"] = "Confirmação";
+}
+
+<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Cadastro realizado com sucesso!</h4>
+    <p>O aluno foi cadastrado com os seguintes dados:</p>
+</div>
+
+<dl class="row">
+    <dt class="col-sm-3">Nome</dt>
+    <dd class="col-sm-9">@Model.Nome</dd>
+
+    <dt class="col-sm-3">Email</dt>
+    <dd class="col-sm-9">@Model.Email</dd>
+
+    <dt class="col-sm-3">RA</dt>
+    <dd class="col-sm-9">@Model.RA</dd>
+
+    <dt class="col-sm-3">Curso</dt>
+    <dd class="col-sm-9">@Model.Curso</dd>
+
+    <dt class="col-sm-3">Data de Nascimento</dt>
+    <dd class="col-sm-9">@Model.DataNascimento.ToString("dd/MM/yyyy")</dd>
+</dl>
+
+<a asp-controller="Aluno" asp-action="Cadastrar" class="btn btn-success">Cadastrar outro</a>
